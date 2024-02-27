@@ -2,7 +2,6 @@
 
 //Trabalhando com variáveis C#
 
-//Strings
 //Declarando variável sem inicialização
 string message1 = null;
 //Inicializar a variável com nulo
