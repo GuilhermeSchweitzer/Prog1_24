@@ -36,7 +36,8 @@ string city = String.Empty;
 Console.WriteLine("Qual o nome da cidade em que você mora?");
 city = Console.ReadLine();
 string country = String.Empty;
-Console.WriteLine("Em que país você mora?")
+Console.WriteLine("Em que país você mora?");
 country = Console.ReadLine();
 
-string result = $"Bem-vindo {name}! {email}  -  "
+string result = $"Bem-vindo {name}! {email}  -  {gender} - {born} - {CEP} - {street} - {number} - {neighborhood} - {city} - {UF} - {country} ";
+Console.WriteLine(result);
