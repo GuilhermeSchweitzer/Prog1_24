@@ -27,3 +27,16 @@ Console.WriteLine("Qual é o seu nome?");
 nome = Console.ReadLine();
 string resultado = $"Oi, {nome}! Pare de jaguarice!";
 Console.WriteLine(resultado);
+
+// Substituindo conteúdo de strings
+string nomeCompleto = "Guilherme Schweitzer";
+nomeCompleto = nomeCompleto.Replace("Schweitzer", "Silva");
+Console.WriteLine( nomeCompleto );
+
+// Comparação de strings
+bool isNomeEqual = ( nomeCompleto == "Guilherme Schweitzer");
+
+bool isNomeEqual2 = string.Equals(nomeCompleto, "Guilherme Silva");
+
+Console.WriteLine($"Primeiro resultado: {isNomeEqual}");
+Console.WriteLine($"Segundo resultado: {isNomeEqual2}");
