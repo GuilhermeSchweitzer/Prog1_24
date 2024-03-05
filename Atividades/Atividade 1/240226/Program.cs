@@ -1,6 +1,6 @@
 ﻿using System;
 
-string message1 = System.String.Empty;
+string message1 = System.String.Empty; /* comentário */
 var message2 = "Bem-Vindo, favor preencher a ficha a seguir para prosseguir";
 
 Console.WriteLine( message2 );
