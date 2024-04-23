@@ -11,10 +11,10 @@ namespace _240401_01.Repository
         }
         public Product Retrieve(int id)
         {
-            foreach(var c in DataSet.Products)
+            foreach(var p in DataSet.Products)
             {
-                if( c.ProductID == id)
-                    return c;
+                if( p.ProductID == id)
+                    return p;
             }
             return null;
         }
