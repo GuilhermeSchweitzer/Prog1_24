@@ -18,5 +18,22 @@ namespace _240401_01.Repository
             }
             return null;
         }
+
+        public List<Customer> Retrieve()
+        {
+            return DataSet.Customers;
+        }
+
+        private int GetNextId()
+        {
+            int n = 0;
+            foreach(var c in DataSet.Customers)
+            {
+                if(c.CustomerID > n)
+                    n = c.CustomerID;
+            }
+
+            return n++;
+        }
     }
 }
