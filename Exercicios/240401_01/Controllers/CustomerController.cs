@@ -15,12 +15,16 @@ using _240401_01.Repository;
         {
             customerRepository.Save(customer);
         }
+        public List<Customer> Get()
+        {
+            return customerRepository.Retrieve();
+        }
         public Customer Get(int id)
         {
             return customerRepository.Retrieve(id);
         }
-        public List<Customer> Get()
+        public List<Customer> GetByName(string name)
         {
-            return customerRepository.Retrieve();
+            return customerRepository.RetrieveByName(name);
         }
     }

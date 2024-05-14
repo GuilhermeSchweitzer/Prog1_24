@@ -24,6 +24,19 @@ namespace _240401_01.Repository
             return DataSet.Customers;
         }
 
+        public List<Customer> RetrieveByName(string name)
+        {
+            List<Customer> retorno = new List<Customer>();
+            foreach(var c in DataSet.Customers)
+            {
+                if(c.Name.Contains(name))
+                {
+                    retorno.Add(c);
+                }
+            }
+            return retorno;
+        }
+
         private int GetNextId()
         {
             int n = 0;
@@ -33,7 +46,7 @@ namespace _240401_01.Repository
                     n = c.CustomerID;
             }
 
-            return n++;
+            return ++n;
         }
     }
 }
