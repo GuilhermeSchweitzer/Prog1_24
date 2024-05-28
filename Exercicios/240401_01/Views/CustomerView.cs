@@ -31,6 +31,7 @@ namespace _240401_01.Views
                 Console.WriteLine("1 - Inserir o consumidor");
                 Console.WriteLine("2 - Pesquisar o consumidor");
                 Console.WriteLine("3 - Listar o consumidor");
+                Console.WriteLine("4 - Exportar dados delimitados");
                 Console.WriteLine("0 - Sair");
 
                 int menu = 0;
@@ -49,6 +50,11 @@ namespace _240401_01.Views
                         break;
                         case 3:
                             ListCustomers();
+                        break;
+                        case 4:
+                        {
+                            customerController.ExportToDelimited();
+                        }
                         break;
                         default:
                             Console.WriteLine("Opção Inválida.");
@@ -157,7 +163,7 @@ namespace _240401_01.Views
         }
         private void ShowCustomerById(int id)
         {
-            Customer c = customerController.Get(id);
+            Customer? c = customerController.Get(id);
             if(c != null)
             {
                 Console.WriteLine(c.ToString());
