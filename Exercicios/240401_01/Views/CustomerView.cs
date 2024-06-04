@@ -2,7 +2,6 @@ using _240401_01.Views;
 using _240401_01.Controllers;
 using _240401_01.Models;
 using _240401_01.Data;
-using _240401_01.Repository;
 
 namespace _240401_01.Views
 {
@@ -32,6 +31,7 @@ namespace _240401_01.Views
                 Console.WriteLine("2 - Pesquisar o consumidor");
                 Console.WriteLine("3 - Listar o consumidor");
                 Console.WriteLine("4 - Exportar dados delimitados");
+                Console.WriteLine("5 - Importar dados delimitados");
                 Console.WriteLine("0 - Sair");
 
                 int menu = 0;
@@ -60,6 +60,9 @@ namespace _240401_01.Views
                             Console.WriteLine("Opção Inválida.");
                             aux = true;
                         break;
+                        case 5:
+                            
+                        break;
                     }
                 }
                 catch
@@ -70,6 +73,19 @@ namespace _240401_01.Views
             }while(aux);
         }
 
+        private void ImportFromDelimited()
+        {
+            Console.WriteLine("Informe o caminho do arquivo: ");
+            string pathFile = Console.ReadLine();
+
+            Console.WriteLine("Informe o caracter delimitador: ");
+            string delimiter = Console.ReadLine();
+            
+            string response =
+            customerController.ImportFromDelimited(pathFile, delimiter);
+
+            Console.WriteLine(response);
+        }
         private void InsertCustomer()
         {
             Console.WriteLine("***********************");
